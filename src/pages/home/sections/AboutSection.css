@@ -1,0 +1,16 @@
+.about-section {
+  min-height: 100svh;
+  padding-block: var(--section-gap);
+  background: var(--color-off-white);
+}
+
+.about-section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.about-section p {
+  max-width: 62ch;
+  margin-top: 16px;
+  line-height: 1.6;
+}

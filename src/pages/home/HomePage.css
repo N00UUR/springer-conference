@@ -1,0 +1,38 @@
+.home-cover {
+  background: var(--color-off-white)
+    url("../../assets/images/hero-background.jpg") center / cover no-repeat;
+}
+
+.home-first-screen {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(12px, 3svh, 40px);
+  padding-block: clamp(8px, 1.5svh, 15px) clamp(12px, 4svh, 48px);
+}
+
+html:has(.conference-home) {
+  scroll-snap-type: y mandatory;
+}
+
+.conference-home > * {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@media (max-width: 640px) {
+  .home-first-screen {
+    justify-content: flex-start;
+  }
+
+  html:has(.conference-home) {
+    scroll-snap-type: y proximity;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(.conference-home) {
+    scroll-snap-type: none;
+  }
+}
