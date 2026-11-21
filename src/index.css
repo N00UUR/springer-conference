@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", Arial, sans-serif;
+  --font-display: "Playfair Display Variable", Georgia, serif;
+
+  --color-ink: #00040e;
+  --color-gold: #c6a45c;
+  --color-off-white: #faf8f3;
+  --color-cream: #fff8e6;
+}
+
+:root {
+  --content-max: 1280px;
+  --page-gutter: clamp(16px, 5.55vw, 80px);
+  --section-gap: clamp(48px, 7vw, 100px);
+}
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-off-white);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+}
+
+.page-container {
+  width: min(
+    var(--content-max),
+    calc(100% - var(--page-gutter) - var(--page-gutter))
+  );
+  margin-inline: auto;
+}
