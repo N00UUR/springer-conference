@@ -4,6 +4,7 @@ import AboutSection from './sections/AboutSection'
 import ObjectivesSection from './sections/ObjectivesSection'
 import ImportantDatesSection from './sections/ImportantDatesSection'
 import TracksSection from './sections/TracksSection'
+import PublicationSection from './sections/PublicationSection'
 import './HomePage.css'
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
       <ObjectivesSection />
       <ImportantDatesSection />
       <TracksSection />
+      <PublicationSection />
     </main>
   )
 }
