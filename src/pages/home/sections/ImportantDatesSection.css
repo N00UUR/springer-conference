@@ -1,0 +1,85 @@
+.important-dates {
+  background: #fff5e3;
+  padding-block: clamp(24px, 3vw, 40px) clamp(48px, 7vw, 96px);
+}
+
+.important-dates h2 {
+  font: 700 clamp(1.75rem, 3vw, 2.5rem) / 1.325 var(--font-display);
+}
+
+.dates-intro {
+  max-width: 710px;
+  margin-top: 12px;
+  color: #494949;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.68;
+}
+
+.dates-timeline {
+  --dot: clamp(14px, 1.4vw, 20px);
+  position: relative;
+  max-width: 599px;
+  margin-top: clamp(28px, 4vw, 52px);
+  padding: 0;
+  list-style: none;
+}
+
+.dates-timeline::before {
+  content: '';
+  position: absolute;
+  inset: 10px auto 0 calc(var(--dot) / 2);
+  width: 1px;
+  background: var(--color-gold);
+}
+
+.dates-timeline li {
+  position: relative;
+  display: grid;
+  gap: clamp(6px, 1vw, 12px);
+  padding-inline-start: calc(var(--dot) + 12px);
+  padding-bottom: clamp(40px, 7vw, 104px);
+}
+
+.dates-timeline li:has(img) {
+  padding-bottom: 32px;
+}
+
+.dates-timeline li::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  inset-inline-start: 0;
+  width: var(--dot);
+  height: var(--dot);
+  border-radius: 50%;
+  background: var(--color-gold);
+}
+
+.dates-timeline span {
+  line-height: 1.8;
+}
+
+.dates-timeline h3 {
+  font: 700 clamp(1.125rem, 1.6vw, 1.25rem) / 1.45 var(--font-sans);
+}
+
+.dates-timeline time {
+  color: var(--color-gold);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+}
+
+.dates-timeline p {
+  color: #494949;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.dates-timeline img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 567 / 350;
+  object-fit: cover;
+  margin-top: clamp(12px, 2vw, 28px);
+  border-radius: 8px;
+}

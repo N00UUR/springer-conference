@@ -1,0 +1,90 @@
+.publication-section {
+  --publication-space: clamp(28px, 4vw, 52px);
+  background: linear-gradient(98deg, #101f3c 20%, #ffdf9f 100%);
+  border-radius: 8px;
+  padding-block: 20px var(--publication-space);
+  color: #faf8f3;
+  font: 400 14px/20px var(--font-sans);
+  letter-spacing: -0.54px;
+}
+
+.publication-section :where(p, h2, h3) {
+  margin: 0;
+}
+
+.publication-label,
+.publication-notice h3,
+.publication-committee {
+  display: flex;
+  align-items: center;
+}
+
+.publication-label {
+  gap: 8px;
+  padding-block: 7px;
+}
+
+.publication-section h2 {
+  margin: var(--publication-space) 0 24px;
+  font: 700 clamp(28px, 3vw, 40px)/1.325 var(--font-display);
+  letter-spacing: normal;
+}
+
+.publication-journal,
+.publication-notice {
+  display: grid;
+  gap: 12px;
+  padding: 20px 12px;
+  border-radius: 8px;
+}
+
+.publication-section h3 {
+  font: 500 20px/30px var(--font-sans);
+}
+
+.publication-journal {
+  background: #1e273b;
+}
+
+.publication-journal h3 {
+  color: #c6a45c;
+}
+
+.publication-notice {
+  margin-top: 16px;
+  background: #fff8e6;
+  border-left: 4px solid #c9a24b;
+  color: #494949;
+}
+
+.publication-notice h3 {
+  gap: 12px;
+  color: #00040e;
+}
+
+.publication-committee {
+  justify-content: center;
+  gap: 12px;
+  margin: var(--publication-space) auto 0;
+  width: min(254px, 100%);
+  min-height: 48px;
+  padding: 8px 10px;
+  background: #c6a45c;
+  border-radius: 8px;
+  color: #00040e;
+  font: 500 16px/30px var(--font-sans);
+  letter-spacing: inherit;
+}
+
+@media (min-width: 900px) {
+  .publication-journal p span {
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 599px) {
+  .publication-section {
+    background: linear-gradient(155deg, #101f3c 35%, #ffdf9f);
+  }
+}
