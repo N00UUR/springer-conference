@@ -1,6 +1,7 @@
 import SiteHeader from '../../components/layout/SiteHeader'
 import HeroSection from './sections/HeroSection'
 import AboutSection from './sections/AboutSection'
+import ObjectivesSection from './sections/ObjectivesSection'
 import './HomePage.css'
 
 export default function HomePage() {
@@ -14,6 +15,7 @@ export default function HomePage() {
       </div>
 
       <AboutSection />
+      <ObjectivesSection />
     </main>
   )
 }
