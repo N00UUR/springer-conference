@@ -3,6 +3,7 @@ import HeroSection from './sections/HeroSection'
 import AboutSection from './sections/AboutSection'
 import ObjectivesSection from './sections/ObjectivesSection'
 import ImportantDatesSection from './sections/ImportantDatesSection'
+import TracksSection from './sections/TracksSection'
 import './HomePage.css'
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
       <AboutSection />
       <ObjectivesSection />
       <ImportantDatesSection />
+      <TracksSection />
     </main>
   )
 }
