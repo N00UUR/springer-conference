@@ -11,9 +11,16 @@
 }
 
 :root {
+  --conference-banner-gradient: linear-gradient(98deg, #101f3c 20%, #ffdf9f 100%);
   --content-max: 1280px;
   --page-gutter: clamp(16px, 5.55vw, 80px);
   --section-gap: clamp(48px, 7vw, 100px);
+}
+
+@media (max-width: 599px) {
+  :root {
+    --conference-banner-gradient: linear-gradient(155deg, #101f3c 35%, #ffdf9f);
+  }
 }
 
 @layer base {

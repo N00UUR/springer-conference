@@ -48,13 +48,16 @@ export default function SiteHeader() {
             About <ChevronDown size={18} aria-hidden="true" />
           </a>
 
-          {['Authors', 'Program'].map((label) => (
-            <span key={label}>
-              {label} <ChevronDown size={18} aria-hidden="true" />
-            </span>
-          ))}
+          <span>
+            Authors <ChevronDown size={18} aria-hidden="true" />
+          </span>
+          <a href="#program" onClick={() => setMenuOpen(false)}>
+            Program
+          </a>
 
-          <span>Contact Us</span>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            Contact Us
+          </a>
         </nav>
 
         <div className="site-auth">

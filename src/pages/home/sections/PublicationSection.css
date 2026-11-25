@@ -1,6 +1,6 @@
 .publication-section {
   --publication-space: clamp(28px, 4vw, 52px);
-  background: linear-gradient(98deg, #101f3c 20%, #ffdf9f 100%);
+  background: var(--conference-banner-gradient);
   border-radius: 8px;
   padding-block: 20px var(--publication-space);
   color: #faf8f3;
@@ -80,11 +80,5 @@
   .publication-journal p span {
     display: block;
     margin-top: 8px;
-  }
-}
-
-@media (max-width: 599px) {
-  .publication-section {
-    background: linear-gradient(155deg, #101f3c 35%, #ffdf9f);
   }
 }
