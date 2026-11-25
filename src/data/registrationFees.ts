@@ -1,4 +1,4 @@
-type RegistrationFee = {
+export type RegistrationFee = {
   id: string
   name: string
   description: string

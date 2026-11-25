@@ -3,68 +3,11 @@
   letter-spacing: -0.54px;
 }
 
-.program-heading {
-  max-width: 788px;
-  margin-inline: auto;
-  text-align: center;
-}
-
-.program-heading h2 {
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.325;
-  font-weight: 700;
-  letter-spacing: normal;
-}
-
-.program-heading p {
-  margin-top: 12px;
-  font-size: 16px;
-  line-height: 30px;
-  color: #494949;
-}
-
 .program-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   margin-top: clamp(24px, 4vw, 52px);
-}
-
-.program-card {
-  padding: 20px 10px;
-  min-height: 246px;
-  background: white;
-  border-radius: 8px;
-}
-
-.program-card img {
-  width: 61px;
-  height: auto;
-  padding: 10px;
-  object-fit: contain;
-}
-
-.program-card h3 {
-  margin-top: 16px;
-  font: 500 20px/30px var(--font-sans);
-}
-
-.program-card p {
-  margin-top: 8px;
-  max-width: 280px;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .program-card {
-    transition: transform 180ms ease, box-shadow 180ms ease;
-  }
-
-  .program-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgb(16 31 60 / 8%);
-  }
 }
 
 @media (max-width: 1023px) {
@@ -79,8 +22,4 @@
     gap: 16px;
   }
 
-  .program-card {
-    min-height: auto;
-    padding: 20px 16px;
-  }
 }

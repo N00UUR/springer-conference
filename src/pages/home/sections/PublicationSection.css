@@ -3,7 +3,7 @@
   background: var(--conference-banner-gradient);
   border-radius: 8px;
   padding-block: 20px var(--publication-space);
-  color: #faf8f3;
+  color: var(--color-off-white);
   font: 400 14px/20px var(--font-sans);
   letter-spacing: -0.54px;
 }
@@ -13,8 +13,7 @@
 }
 
 .publication-label,
-.publication-notice h3,
-.publication-committee {
+.publication-notice h3 {
   display: flex;
   align-items: center;
 }
@@ -43,37 +42,30 @@
 }
 
 .publication-journal {
-  background: #1e273b;
+  background: var(--color-journal);
 }
 
 .publication-journal h3 {
-  color: #c6a45c;
+  color: var(--color-gold);
 }
 
 .publication-notice {
   margin-top: 16px;
-  background: #fff8e6;
-  border-left: 4px solid #c9a24b;
-  color: #494949;
+  background: var(--color-cream);
+  border-left: 4px solid var(--color-notice-border);
+  color: var(--color-muted);
 }
 
 .publication-notice h3 {
   gap: 12px;
-  color: #00040e;
+  color: var(--color-ink);
 }
 
 .publication-committee {
-  justify-content: center;
+  display: flex;
   gap: 12px;
-  margin: var(--publication-space) auto 0;
   width: min(254px, 100%);
-  min-height: 48px;
-  padding: 8px 10px;
-  background: #c6a45c;
-  border-radius: 8px;
-  color: #00040e;
-  font: 500 16px/30px var(--font-sans);
-  letter-spacing: inherit;
+  margin: var(--publication-space) auto 0;
 }
 
 @media (min-width: 900px) {

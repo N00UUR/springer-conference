@@ -1,31 +1,12 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import conferenceLogo from "../../assets/logos/conference-logo.png";
-import { footerNavigation } from "../../data/conferenceLinks";
+import ConferenceLogo from "./ConferenceLogo";
+import { contact, footerNavigation } from "../../data/conferenceLinks";
+import { conferenceContacts } from "../../data/conferenceContacts";
 import "./SiteFooter.css";
 
-const contactEmail = "contact@dicicdi2027.dmu.edu.eg";
-const contactPhone = "+20 45 331 8537";
-const contacts = [
-  {
-    icon: "email",
-    fallback: Mail,
-    text: contactEmail,
-    href: `mailto:${contactEmail}`,
-  },
-  {
-    icon: "phone",
-    fallback: Phone,
-    text: contactPhone,
-    href: `tel:${contactPhone.replaceAll(" ", "")}`,
-  },
-  {
-    icon: "location",
-    fallback: MapPin,
-    text: "FCI, Damanhour University, Beheira, Egypt",
-  },
-];
+const fallbackIcons = { email: Mail, phone: Phone, location: MapPin };
 
-// Use the original artwork as soon as the corresponding Figma export is added.
+// Use the matching contact icon if its Figma artwork is available.
 const contactIcons = import.meta.glob<string>(
   "../../assets/icons/footer/*.svg",
   {
@@ -41,12 +22,7 @@ export default function SiteFooter() {
       <div className="page-container">
         <div className="site-footer__columns">
           <div className="site-footer__brand">
-            <a
-              href={`${import.meta.env.BASE_URL}#home`}
-              aria-label="DICICDI 2027 home"
-            >
-              <img src={conferenceLogo} alt="" width={248} height={83} />
-            </a>
+            <ConferenceLogo />
             <p>
               The First Damanhour International Conference on Intelligent
               Computing and Digital Innovation. Organized with scholarly rigor
@@ -68,10 +44,11 @@ export default function SiteFooter() {
           ))}
 
           <div className="site-footer__contact" id="contact">
-            <h2>Contact Us</h2>
+            <h2>{contact.label}</h2>
             <address>
               <ul>
-                {contacts.map(({ icon, fallback: Icon, text, href }) => {
+                {conferenceContacts.map(({ icon, text, href }) => {
+                  const Icon = fallbackIcons[icon];
                   const artwork =
                     contactIcons[`../../assets/icons/footer/${icon}.svg`];
                   return (

@@ -1,6 +1,6 @@
 .objectives-section {
-  background: var(--color-off-white);
-  padding-bottom: var(--section-gap);
+  background: var(--color-section-sand);
+  padding-block: clamp(28px, 3.2vw, 46px);
 }
 
 .objectives-section h2 {
@@ -11,10 +11,10 @@
 .objectives-intro {
   margin: 12px 0 0;
   max-width: 990px;
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.875;
   letter-spacing: -0.54px;
-  color: #494949;
+  color: var(--color-muted);
 }
 
 .objectives-grid {
@@ -34,7 +34,7 @@
   min-height: 170px;
   padding: 16px 24px;
   border-radius: 8px;
-  background: white;
+  background: var(--color-surface);
 }
 
 .objective-card img {
@@ -52,7 +52,7 @@
 
 .objective-card p {
   margin: 4px 0 0;
-  color: #494949;
+  color: var(--color-muted);
   font-size: 1rem;
   line-height: 1.875;
   letter-spacing: -0.54px;
@@ -65,7 +65,8 @@
   .objective-card h3 { font-size: 1.125rem; }
   .objective-card p { line-height: 1.5; }
 }
-@media (min-width: 761px) {
+
+@media (min-width: 761px) and (max-height: 780px) {
   .objectives-section {
     min-height: 100svh;
     display: grid;

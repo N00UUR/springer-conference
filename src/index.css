@@ -8,10 +8,24 @@
   --color-gold: #c6a45c;
   --color-off-white: #faf8f3;
   --color-cream: #fff8e6;
+  --color-surface: #fff;
+  --color-navy: #101f3c;
+  --color-light-gold: #ffdf9f;
+  --color-muted: #494949;
+  --color-notice-border: #c9a24b;
+  --color-border: #e4eaf5;
+  --color-fee-heading: #00071c;
+  --color-body-muted: #45464d;
+  --color-gold-dark: #8a691f;
+  --color-journal: #1e273b;
+  --color-section-sand: #efe3cd;
+  --color-timeline: #fffaf0;
 }
 
 :root {
-  --conference-banner-gradient: linear-gradient(98deg, #101f3c 20%, #ffdf9f 100%);
+  --hero-title-gradient: linear-gradient(90deg, var(--color-ink) 32%, var(--color-gold) 62%);
+  --conference-banner-gradient: linear-gradient(98deg, var(--color-navy) 20%, var(--color-light-gold) 100%);
+  --conference-footer-gradient: linear-gradient(105deg, var(--color-gold), var(--color-navy));
   --content-max: 1280px;
   --page-gutter: clamp(16px, 5.55vw, 80px);
   --section-gap: clamp(48px, 7vw, 100px);
@@ -19,7 +33,13 @@
 
 @media (max-width: 599px) {
   :root {
-    --conference-banner-gradient: linear-gradient(155deg, #101f3c 35%, #ffdf9f);
+    --conference-banner-gradient: linear-gradient(155deg, var(--color-navy) 35%, var(--color-light-gold));
+  }
+}
+
+@media (max-width: 740px) {
+  :root {
+    --conference-footer-gradient: linear-gradient(155deg, var(--color-gold), var(--color-navy) 78%);
   }
 }
 

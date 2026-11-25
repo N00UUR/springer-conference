@@ -1,0 +1,31 @@
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  font: 500 16px/30px var(--font-sans);
+}
+
+.action-link--primary {
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: var(--color-gold);
+  color: var(--color-ink);
+  letter-spacing: -0.54px;
+}
+
+.action-link--text {
+  color: var(--color-gold);
+}
+
+a.action-link:hover { text-decoration: underline; }
+
+.action-arrow {
+  --arrow-image: url("../../assets/icons/guidelines-arrow-right.svg");
+  width: 16px;
+  height: 16px;
+  flex: none;
+  background-color: currentColor;
+  mask: var(--arrow-image) center / contain no-repeat;
+}

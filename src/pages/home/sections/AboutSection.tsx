@@ -1,3 +1,5 @@
+import ActionLink from '../../../components/ui/ActionLink'
+import { discoverConference, scientificCommittee } from '../../../data/conferenceLinks'
 import aboutImage from '../../../assets/images/about-conference.png'
 import './AboutSection.css'
 
@@ -24,14 +26,16 @@ export default function AboutSection() {
           </p>
 
           <div className="about-actions">
-            <button type="button" className="about-discover" disabled>
-              Discover the conference
-            </button>
+            <ActionLink {...discoverConference} className="about-discover" />
 
-            <button type="button" className="about-committee" disabled>
-              View Scientific Committee
-              <span className="about-arrow" aria-hidden="true" />
-            </button>
+            <ActionLink
+              label={`View ${scientificCommittee.label}`}
+              href={scientificCommittee.href}
+              variant="text"
+              className="about-committee"
+              arrow
+              arrowClassName="about-arrow"
+            />
           </div>
         </div>
 

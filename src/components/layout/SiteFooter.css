@@ -1,7 +1,7 @@
 .site-footer {
   margin-top: clamp(32px, 3.5vw, 50px);
   padding-block: clamp(48px, 6.88vw, 99px) 19px;
-  background: linear-gradient(105deg, var(--color-gold), #101f3c);
+  background: var(--conference-footer-gradient);
   color: var(--color-off-white);
   font: 400 12px/18px var(--font-sans);
   scroll-snap-align: end;
@@ -20,7 +20,7 @@
 
 .site-footer h2 {
   margin: 0 0 12px;
-  color: #ffdf9f;
+  color: var(--color-light-gold);
   font: 500 16px/24px var(--font-sans);
   letter-spacing: -0.54px;
 }
@@ -38,7 +38,7 @@
   overflow-wrap: anywhere;
 }
 
-.site-footer__contact :is(img, svg) { width: 24px; height: 24px; color: #ffdf9f; }
+.site-footer__contact :is(img, svg) { width: 24px; height: 24px; color: var(--color-light-gold); }
 .site-footer__copyright { margin-top: clamp(48px, 7.71vw, 111px); }
 
 @media (max-width: 1100px) {
@@ -50,7 +50,6 @@
   .site-footer__columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; }
   .site-footer__brand, .site-footer__contact { grid-column: 1 / -1; }
   .site-footer__brand img { width: 216px; }
-  .site-footer { background: linear-gradient(155deg, var(--color-gold), #101f3c 78%); }
 }
 
 @media (max-width: 420px) {

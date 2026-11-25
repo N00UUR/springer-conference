@@ -1,39 +1,6 @@
-import submissionPhoto from '../../../assets/images/submission-deadline.png'
+import { formatConferenceDate } from '../../../data/conferenceDates'
+import { milestones } from '../../../data/conferenceMilestones'
 import './ImportantDatesSection.css'
-
-const milestones = [
-  {
-    title: 'Submission Opens',
-    date: '1 Dec 2026',
-    iso: '2026-12-01',
-    note: 'Portal live for submissions',
-  },
-  {
-    title: 'Submission Deadline',
-    date: '31 Jan 2027',
-    iso: '2027-01-31',
-    note: 'Strict deadline for full papers',
-    photo: submissionPhoto,
-  },
-  {
-    title: 'Notifications Of Decisions',
-    date: '10 Mar 2027',
-    iso: '2027-03-10',
-    note: 'Peer review outcomes sent',
-  },
-  {
-    title: 'Camera Ready & Reg.',
-    date: '30 Mar 2027',
-    iso: '2027-03-30',
-    note: 'First revision and payment',
-  },
-  {
-    title: 'Conference Day',
-    date: '14 Apr 2027',
-    iso: '2027-04-14',
-    note: 'Inaugurations and sessions',
-  },
-]
 
 export default function ImportantDatesSection() {
   return (
@@ -47,15 +14,16 @@ export default function ImportantDatesSection() {
 
         <p className="dates-intro">
           Key procedural milestones for authors, reviewers, and attending delegates.
+          <br />
           Please ensure all submission materials adhere to the deadlines.
         </p>
 
         <ol className="dates-timeline">
-          {milestones.map(({ title, date, iso, note, photo }, index) => (
+          {milestones.map(({ title, iso, note, photo }, index) => (
             <li key={iso}>
               <span>Phase {String(index + 1).padStart(2, '0')}</span>
               <h3>{title}</h3>
-              <time dateTime={iso}>{date}</time>
+              <time dateTime={iso}>{formatConferenceDate(iso, 'short')}</time>
               <p>{note}</p>
 
               {photo && (

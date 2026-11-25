@@ -12,6 +12,10 @@
   padding-block: clamp(8px, 1.5svh, 15px) clamp(12px, 4svh, 48px);
 }
 
+.conference-home > .important-dates {
+  margin-block-start: var(--section-gap);
+}
+
 html:has(.conference-home) {
   scroll-snap-type: y mandatory;
 }

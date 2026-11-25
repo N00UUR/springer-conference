@@ -1,5 +1,5 @@
 .important-dates {
-  background: #fff5e3;
+  background: var(--color-timeline);
   padding-block: clamp(24px, 3vw, 40px) clamp(48px, 7vw, 96px);
 }
 
@@ -8,9 +8,9 @@
 }
 
 .dates-intro {
-  max-width: 710px;
+  max-width: 840px;
   margin-top: 12px;
-  color: #494949;
+  color: var(--color-muted);
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.68;
 }
@@ -70,7 +70,7 @@
 }
 
 .dates-timeline p {
-  color: #494949;
+  color: var(--color-muted);
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.5;
 }
