@@ -1,7 +1,7 @@
 import calendarIcon from '../../../assets/icons/calendar.svg'
 import locationIcon from '../../../assets/icons/location.svg'
 import clockIcon from '../../../assets/icons/deadline-clock.svg'
-import guidelinesArrow from '../../../assets/icons/guidelines-arrow-right.svg'
+import PaperActions from '../../../components/conference/PaperActions'
 import './HeroSection.css'
 
 const countdown = [
@@ -39,16 +39,7 @@ export default function HeroSection() {
         </span>
       </div>
 
-      <div className="hero-actions">
-        <button className="hero-submit" type="button" disabled>
-          Submit Paper
-        </button>
-
-        <span className="hero-guidelines">
-          Paper Guidelines
-          <img src={guidelinesArrow} alt="" width={16} height={16} />
-        </span>
-      </div>
+      <PaperActions />
 
       <div className="hero-countdown">
         <p className="hero-deadline">

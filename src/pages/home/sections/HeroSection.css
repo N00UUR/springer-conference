@@ -36,8 +36,7 @@
   text-shadow: 0 1px 4px #000b;
 }
 
-.hero-badges,
-.hero-actions {
+.hero-badges {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -45,7 +44,6 @@
 }
 
 .hero-badge,
-.hero-guidelines,
 .hero-deadline {
   display: inline-flex;
   align-items: center;
@@ -64,23 +62,6 @@
 .hero-deadline img {
   width: 20px;
   height: 20px;
-}
-
-.hero-submit,
-.hero-guidelines {
-  min-height: 44px;
-  font-weight: 600;
-}
-
-.hero-submit {
-  padding: 8px clamp(14px, 3vw, 48px);
-  border-radius: 8px;
-  background: var(--color-gold);
-}
-
-.hero-guidelines {
-  gap: 8px;
-  color: var(--color-off-white);
 }
 
 .hero-countdown {
@@ -147,9 +128,6 @@
     font-size: clamp(1.75rem, 7vw, 2.5rem);
   }
 
-  .hero-actions {
-    font-size: 0.875rem;
-  }
   .hero-description {
   font-size: 0.875rem;
   line-height: 1.45;

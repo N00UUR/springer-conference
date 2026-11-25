@@ -7,6 +7,7 @@ import TracksSection from './sections/TracksSection'
 import PublicationSection from './sections/PublicationSection'
 import ProgramSection from './sections/ProgramSection'
 import FeesSection from './sections/FeesSection'
+import CallToActionSection from './sections/CallToActionSection'
 import './HomePage.css'
 
 export default function HomePage() {
@@ -26,6 +27,7 @@ export default function HomePage() {
       <PublicationSection />
       <ProgramSection />
       <FeesSection />
+      <CallToActionSection />
     </main>
   )
 }

@@ -1,0 +1,24 @@
+.conference-cta {
+  padding: clamp(64px, 8.62vw, 124px) var(--page-gutter) clamp(48px, 5.35vw, 77px);
+  border-radius: 8px;
+  background: var(--conference-banner-gradient);
+  color: white;
+  text-align: center;
+}
+
+.conference-cta__content {
+  max-width: 723px;
+  margin-inline: auto;
+}
+
+.conference-cta h2 {
+  max-width: 715px;
+  margin: 0 auto;
+  font: 700 clamp(28px, 3vw, 40px)/1.325 var(--font-display);
+}
+
+.conference-cta p {
+  margin: 24px 0 clamp(28px, 3vw, 40px);
+  font: 400 clamp(16px, 1.6vw, 20px)/1.5 var(--font-sans);
+  letter-spacing: -0.54px;
+}

@@ -55,7 +55,9 @@ export default function SiteHeader() {
             Program
           </a>
 
-          <span>Contact Us</span>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            Contact Us
+          </a>
         </nav>
 
         <div className="site-auth">
