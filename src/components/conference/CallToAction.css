@@ -2,7 +2,7 @@
   padding: clamp(64px, 8.62vw, 124px) var(--page-gutter) clamp(48px, 5.35vw, 77px);
   border-radius: 8px;
   background: var(--conference-banner-gradient);
-  color: white;
+  color: var(--color-surface);
   text-align: center;
 }
 

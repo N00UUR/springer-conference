@@ -29,7 +29,7 @@
   font-weight: 400;
   line-height: 1.68;
   letter-spacing: -0.54px;
-  color: #494949;
+  color: var(--color-muted);
 }
 
 .about-image {
@@ -46,40 +46,13 @@
   margin-top: clamp(28px, 4vw, 52px);
 }
 
-.about-actions button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  font-family: var(--font-sans);
-  font-size: 16px;
-}
-
 .about-discover {
-  width: 254px;
-  max-width: 100%;
-  padding: 8px 10px;
-  border-radius: 8px;
-  background: var(--color-gold);
-  color: var(--color-ink);
-  font-weight: 500;
-  line-height: 30px;
-  letter-spacing: -0.54px;
+  width: min(254px, 100%);
 }
 
 .about-committee {
-  gap: 10px;
-  color: var(--color-gold);
   font-weight: 600;
-}
-
-.about-arrow {
-  width: 16px;
-  height: 16px;
-  flex: none;
-  background-color: currentColor;
-  mask: url("../../../assets/icons/guidelines-arrow-right.svg")
-    center / contain no-repeat;
+  line-height: 1.5;
 }
 
 @media (max-width: 800px) {

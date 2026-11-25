@@ -15,7 +15,7 @@ export default function HomePage() {
     <main id="home" className="conference-home" lang="en" dir="ltr">
       <div className="home-cover">
         <div className="page-container home-first-screen">
-          <SiteHeader />
+          <SiteHeader isHome />
           <HeroSection />
         </div>
       </div>

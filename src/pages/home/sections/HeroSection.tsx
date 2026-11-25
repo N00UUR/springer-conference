@@ -1,3 +1,5 @@
+import { conferenceDates, formatConferenceDate } from '../../../data/conferenceDates'
+import { conferenceVenue } from '../../../data/conferenceContacts'
 import calendarIcon from '../../../assets/icons/calendar.svg'
 import locationIcon from '../../../assets/icons/location.svg'
 import clockIcon from '../../../assets/icons/deadline-clock.svg'
@@ -21,21 +23,19 @@ export default function HeroSection() {
         </h1>
 
         <p className="hero-description">
-          Join researchers, students, and industry experts at Damanhour
-          University on 14 April 2027 to share original research across
-          eight computing tracks.
+          {`Join researchers, students, and industry experts at Damanhour University on ${formatConferenceDate(conferenceDates.conferenceDay)} to share original research across eight computing tracks.`}
         </p>
       </div>
 
       <div className="hero-badges">
         <span className="hero-badge">
           <img src={calendarIcon} alt="" />
-          <time dateTime="2027-04-14">14 April 2027</time>
+          <time dateTime={conferenceDates.conferenceDay}>{formatConferenceDate(conferenceDates.conferenceDay)}</time>
         </span>
 
-        <span className="hero-badge">
+        <span className="hero-badge" id="venue-location">
           <img src={locationIcon} alt="" />
-          Damanhour University, Egypt
+          {conferenceVenue}
         </span>
       </div>
 
@@ -44,7 +44,7 @@ export default function HeroSection() {
       <div className="hero-countdown">
         <p className="hero-deadline">
           <img src={clockIcon} alt="" />
-          Submission deadline: 31 January 2027
+          Submission deadline: {formatConferenceDate(conferenceDates.submissionDeadline)}
         </p>
 
         <dl className="hero-countdown-grid">

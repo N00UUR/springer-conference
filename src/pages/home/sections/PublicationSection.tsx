@@ -1,3 +1,5 @@
+import ActionLink from '../../../components/ui/ActionLink'
+import { scientificCommittee } from '../../../data/conferenceLinks'
 import noteIcon from '../../../assets/icons/publication/note-edit.svg'
 import noticeIcon from '../../../assets/icons/publication/important-notice.svg'
 import './PublicationSection.css'
@@ -43,10 +45,13 @@ export default function PublicationSection() {
           </p>
         </aside>
 
-        <button type="button" className="publication-committee" disabled>
-          View Scientific Committee
-          <span className="about-arrow" aria-hidden="true" />
-        </button>
+        <ActionLink
+          label={`View ${scientificCommittee.label}`}
+          href={scientificCommittee.href}
+          className="publication-committee"
+          arrow
+          arrowClassName="about-arrow"
+        />
       </div>
     </section>
   )
