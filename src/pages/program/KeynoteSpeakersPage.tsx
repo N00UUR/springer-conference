@@ -7,16 +7,40 @@ import { keynoteSpeakers, previewSpeakers } from '../../data/keynoteSpeakers'
 import './KeynoteSpeakersPage.css'
 
 export default function KeynoteSpeakersPage() {
-  // Sample profiles are available in local development only, never in production.
-  const preview = import.meta.env.DEV && keynoteSpeakers.length === 0
+  const preview = keynoteSpeakers.length === 0
   const speakers = preview ? previewSpeakers : keynoteSpeakers
+
   return (
-    <ProgramLayout title="Keynote Speakers" description="Our keynote speakers bring perspectives from academia and industry on the latest advances in intelligent computing and digital innovation.">
-      <section className="page-container program-page__content keynote-page" aria-label="Keynote speaker profiles">
-        {speakers.length ? <ul className="keynote-page__list">{speakers.map((speaker, index) => <li key={speaker.id}><SpeakerCard speaker={speaker} index={index} preview={preview} /></li>)}</ul> : <p className="keynote-page__empty">Keynote speakers will be announced once confirmed.</p>}
+    <ProgramLayout
+      title="Keynote Speakers"
+      description="Our keynote speakers bring perspectives from academia and industry on the latest advances in intelligent computing and digital innovation."
+    >
+      <section
+        className="page-container program-page__content keynote-page"
+        aria-label="Keynote speaker profiles"
+      >
+        <ul className="keynote-page__list">
+          {speakers.map((speaker, index) => (
+            <li key={speaker.id}>
+              <SpeakerCard
+                speaker={speaker}
+                index={index}
+                preview={preview}
+              />
+            </li>
+          ))}
+        </ul>
       </section>
-      <CallToAction className="program-page__cta" title="Ready to join the conversation?" description="Register to attend the keynote sessions.">
-        <ActionLink label="Register now" href={registration.href} />
+
+      <CallToAction
+        className="program-page__cta"
+        title="Ready to join the conversation?"
+        description="Register to attend the keynote sessions."
+      >
+        <ActionLink
+          label="Register now"
+          href={registration.href}
+        />
       </CallToAction>
     </ProgramLayout>
   )
