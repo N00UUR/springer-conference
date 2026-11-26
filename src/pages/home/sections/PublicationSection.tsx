@@ -19,15 +19,14 @@ export default function PublicationSection() {
 
         <h2 id="publication-title">From Presentation To Publication</h2>
 
-        
-<article className="publication-journal">
-  <p>
-    Selected conference papers may be considered for publication in a
-    partner scientific journal, subject to the journal's editorial
-    policies and review requirements. Publication venues and
-    arrangements will be announced once confirmed.
-  </p>
-</article>
+        <article className="publication-journal">
+          <p>
+            Selected conference papers may be considered for publication in a
+            partner scientific journal, subject to the journal's editorial
+            policies and review requirements. Publication venues and
+            arrangements will be announced once confirmed.
+          </p>
+        </article>
 
         <aside
           className="publication-notice"

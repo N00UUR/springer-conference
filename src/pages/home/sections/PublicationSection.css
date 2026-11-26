@@ -37,11 +37,33 @@
   background: var(--color-journal);
 }
 
+.publication-journal p {
+  max-width: 1100px;
+}
+
 .publication-notice {
   margin-top: 16px;
   background: var(--color-cream);
   border-left: 4px solid var(--color-notice-border);
   color: var(--color-muted);
+}
+
+.publication-notice h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: var(--color-ink);
+  font: 500 20px/30px var(--font-sans);
+  letter-spacing: -0.54px;
+}
+
+.publication-notice h3 img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  object-fit: contain;
 }
 
 .publication-committee {
@@ -51,9 +73,3 @@
   margin: var(--publication-space) auto 0;
 }
 
-@media (min-width: 900px) {
-  .publication-journal p span {
-    display: block;
-    margin-top: 8px;
-  }
-}

@@ -43,7 +43,7 @@ export default function SiteFooter() {
             </nav>
           ))}
 
-          <div className="site-footer__contact" id="contact">
+          <div className="site-footer__contact" id="contact" tabIndex={-1}>
             <h2>{contact.label}</h2>
             <address>
               <ul>
