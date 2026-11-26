@@ -1,11 +1,13 @@
 import './ActionLink.css'
+import type { ReactNode } from 'react'
 
 type ActionLinkProps = Readonly<{
   label: string
   href?: string
   onNavigate?: () => void
-  variant?: 'primary' | 'text'
+  variant?: 'primary' | 'text' | 'outline'
   className?: string
+  leadingIcon?: ReactNode
   arrow?: boolean
   arrowClassName?: string
 }>
@@ -16,12 +18,14 @@ export default function ActionLink({
   variant = 'primary',
   className,
   onNavigate,
+  leadingIcon,
   arrow,
   arrowClassName,
 }: ActionLinkProps) {
   const classes = ['action-link', `action-link--${variant}`, className].filter(Boolean).join(' ')
   const content = (
     <>
+      {leadingIcon}
       {label}
       {arrow && (
         <span

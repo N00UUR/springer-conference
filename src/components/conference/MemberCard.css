@@ -1,0 +1,19 @@
+.member-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+  min-height: 274px;
+  padding: 24px 12px;
+  border-radius: 8px;
+  background: var(--color-surface);
+  overflow-wrap: anywhere;
+}
+.member-card__identity { display: flex; align-items: center; gap: 12px; }
+.member-card__avatar { width: 74px; height: 74px; flex: none; border-radius: 50%; object-fit: cover; }
+.member-card__placeholder { display: grid; place-items: center; background: var(--color-off-white); color: var(--color-muted); }
+.member-card__details { min-width: 0; }
+.member-card__name { font: 500 16px/30px var(--font-sans); letter-spacing: -.54px; }
+.member-card__affiliation { font: 400 12px/18px var(--font-sans); color: var(--color-muted); }
+.member-card__bio { flex: 1; display: flex; align-items: center; font: 400 12px/18px var(--font-sans); }
+.member-card__link { align-self: flex-start; width: min(236px, 100%); text-align: center; }

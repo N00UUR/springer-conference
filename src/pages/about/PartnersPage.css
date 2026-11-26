@@ -1,0 +1,39 @@
+.partners-page { background: var(--color-off-white); --partners-section-space: clamp(48px, 6.95vw, 100px); }
+.partners-page__nav { padding-top: clamp(12px, 1.8vw, 24px); }
+.partners-page__intro { max-width: 717px; padding-block: clamp(56px, 5.8vw, 84px) var(--partners-section-space); }
+.partners-page__intro p { margin-top: 16px; font-size: 20px; }
+.partners-page__sections { display: grid; gap: var(--partners-section-space); }
+.partners-page__sections h2 { font: 600 clamp(25px, 2.3vw, 32px)/1.325 var(--font-display); }
+.partners-page__description { margin-top: 12px; color: var(--color-muted); font: 400 16px/30px var(--font-sans); letter-spacing: -.54px; }
+.partners-page__opportunities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: clamp(24px, 4vw, 52px); padding: 0; list-style: none; }
+.partners-page__organizer { display: flex; align-items: center; gap: 16px; min-height: 187px; padding: 12px 24px; margin-top: 24px; background: var(--color-surface); border-radius: 8px; }
+.partners-page__organizer img { width: 163px; height: 163px; object-fit: contain; flex: none; }
+.partners-page__organizer h3 { font: 500 24px/32px var(--font-sans); }
+.partners-page__organizer p { max-width: 920px; font: 400 20px/30px var(--font-sans); color: var(--color-muted); letter-spacing: -.54px; }
+.partners-page__organizer .partners-page__affiliation { font-size: 16px; margin: 4px 0 12px; }
+.partners-page__center { text-align: center; }
+.partners-page__logos { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(16px, 4.24vw, 61px); max-width: 1216px; margin: 52px auto 0; padding: 0; list-style: none; }
+.partners-page__notice { margin-top: clamp(32px, 3.6vw, 52px); padding: 20px 16px; display: grid; gap: 12px; border-radius: 8px; border-left: 4px solid var(--color-notice-border); background: var(--color-cream); }
+.partners-page__notice h3 { display: flex; align-items: center; gap: 12px; font: 500 20px/30px var(--font-sans); }
+.partners-page__notice h3 img { width: 24px; height: 24px; flex: none; object-fit: contain; }
+.partners-page__notice p { color: var(--color-muted); font: 400 14px/20px var(--font-sans); max-width: 1100px; }
+.partners-page__cta { margin-top: var(--partners-section-space); min-height: 509px; display: grid; place-items: center; padding-block: 64px; }
+.partners-page__cta .conference-cta__content { width: 100%; max-width: 715px; }
+.partners-page__contact { min-width: min(233px, 100%); }
+.partners-page__mail { display: block; width: 24px; height: 24px; flex: none; object-fit: contain; filter: brightness(0); }
+.partners-page__contact:is(:hover, :focus-visible) { text-decoration: none; }
+.partners-page__contact:hover { background: var(--color-light-gold); }
+@media (max-width: 900px) { .partners-page__logos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+  .partners-page { --partners-section-space: 48px; }
+  .partners-page__intro { padding-block: 48px; }
+  .partners-page__intro p { font-size: 16px; line-height: 26px; }
+  .partners-page__opportunities { grid-template-columns: 1fr; }
+  .partners-page__organizer { flex-direction: column; align-items: flex-start; padding: 20px; }
+  .partners-page__organizer p { font-size: 16px; line-height: 26px; }
+  .partners-page__logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .partners-page__cta { min-height: 340px; }
+  .partners-page__logos { margin-top: 32px; }
+  .partners-page__notice { padding: 16px 12px; }
+  .partners-page__opportunities .opportunity-card { min-height: 120px; padding: 16px; }
+}

@@ -38,3 +38,4 @@
 @media (max-width: 600px) {
   .tracks-grid { grid-template-columns: 1fr; }
 }
+.tracks-details-link { display: flex; justify-content: center; margin-top: 12px; }

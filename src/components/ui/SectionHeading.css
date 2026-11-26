@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-.section-heading h2 {
+.section-heading :is(h1, h2) {
   margin: 0;
   font: 700 clamp(28px, 3vw, 40px)/1.325 var(--font-display);
   letter-spacing: normal;

@@ -4,6 +4,7 @@ export const conferenceDates = {
   decisionNotification: '2027-03-10',
   authorRegistrationDeadline: '2027-03-30',
   conferenceDay: '2027-04-14',
+  conferenceEndDay: '2027-04-15',
 } as const
 
 export function formatConferenceDate(isoDate: string, month: 'short' | 'long' = 'long') {
