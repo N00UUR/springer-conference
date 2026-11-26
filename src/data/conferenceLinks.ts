@@ -17,7 +17,9 @@ export const scientificTracksLink = `${home}#/about/scientific-tracks`
 export const contact = { label: 'Contact Us', href: '#contact' }
 export const registration = { label: 'Registration Fees', href: `${home}#registration-fees` }
 export const submitPaper: ConferenceLink = { label: 'Submit Paper' }
-export const paperGuidelines: ConferenceLink = { label: 'Paper Guidelines' }
+export const submissionGuidelinesLink = `${home}#/authors/submission-guidelines`
+export const evaluationProcessLink = `${home}#/authors/evaluation-process`
+export const paperGuidelines: ConferenceLink = { label: 'Paper Guidelines', href: submissionGuidelinesLink }
 export const scientificCommittee: ConferenceLink = { label: 'Scientific Committee', href: `${home}#/about/committee` }
 export const discoverConference: ConferenceLink = { label: 'Discover the conference', href: aboutConferenceLink }
 
@@ -25,7 +27,7 @@ const about: ConferenceLink = { label: 'About the Conference', href: aboutConfer
 const partners: ConferenceLink = { label: 'Academic Partners', href: `${home}#/about/partners` }
 const authorLinks: readonly ConferenceLink[] = [
   { label: 'Submission Guidelines', href: paperGuidelines.href },
-  { label: 'Evaluation Process' },
+  { label: 'Evaluation Process', href: evaluationProcessLink },
 ]
 export const programScheduleLink = `${home}#/program/schedule`
 export const programSpeakersLink = `${home}#/program/keynote-speakers`

@@ -9,7 +9,12 @@ import SchedulePage from './pages/program/SchedulePage'
 import KeynoteSpeakersPage from './pages/program/KeynoteSpeakersPage'
 import LocationPage from './pages/program/LocationPage'
 
+import SubmissionGuidelinesPage from './pages/authors/SubmissionGuidelinesPage'
+import EvaluationProcessPage from './pages/authors/EvaluationProcessPage'
+
 const routes = {
+  '#/authors/submission-guidelines': SubmissionGuidelinesPage,
+  '#/authors/evaluation-process': EvaluationProcessPage,
   '#/about/conference': AboutConferencePage,
   '#/about/scientific-tracks': ScientificTracksPage,
   '#/about/committee': CommitteePage,
