@@ -39,3 +39,22 @@
   .tracks-grid { grid-template-columns: 1fr; }
 }
 .tracks-details-link { display: flex; justify-content: center; margin-top: 12px; }
+
+/* Keep the Home CTA at the bottom of its section, with an explicit gap
+   before Publication. The About variant retains its own spacing. */
+.tracks-section--home {
+  align-content: end;
+  padding-block-end: var(--section-gap);
+}
+
+.tracks-section--home .tracks-details-link {
+  margin-top: clamp(24px, 3.6vw, 52px);
+}
+
+.tracks-section--home .tracks-details-link .action-link {
+  width: min(254px, 100%);
+}
+
+@media (min-width: 1024px) {
+  .tracks-section--home { padding-block-end: 100px; }
+}

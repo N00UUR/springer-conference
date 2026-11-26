@@ -1,10 +1,10 @@
 import './ActionLink.css'
-import type { ReactNode } from 'react'
+import type { MouseEvent, ReactNode } from 'react'
 
 type ActionLinkProps = Readonly<{
   label: string
   href?: string
-  onNavigate?: () => void
+  onNavigate?: (event: MouseEvent<HTMLAnchorElement>) => void
   variant?: 'primary' | 'text' | 'outline'
   className?: string
   leadingIcon?: ReactNode

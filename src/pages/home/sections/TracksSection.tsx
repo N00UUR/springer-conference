@@ -30,7 +30,9 @@ export default function TracksSection({ variant = 'home' }: Readonly<{ variant?:
             />
           ))}
         </ol>
-        <div className="tracks-details-link"><ActionLink label={isAbout ? "View Scientific Tracks" : "View all scientific tracks"} href={scientificTracksLink} variant={isAbout ? "primary" : "text"} arrow /></div>
+        <div className="tracks-details-link">
+          <ActionLink label="View Scientific Tracks" href={scientificTracksLink} arrow />
+        </div>
       </div>
     </section>
   )
