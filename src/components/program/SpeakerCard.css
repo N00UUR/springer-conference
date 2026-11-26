@@ -1,0 +1,13 @@
+.speaker-card { display: grid; grid-template-columns: minmax(0, 322px) minmax(0, 622px); align-items: start; gap: 24px; padding: 24px 12px; background: var(--color-surface); border-radius: 8px; }
+.speaker-card__photo { width: 100%; aspect-ratio: 322 / 298; height: auto; object-fit: cover; border-radius: 8px; }
+.speaker-card__placeholder { display: grid; place-items: center; background: var(--color-section-sand); color: var(--color-gold-dark); }
+.speaker-card__copy { display: grid; gap: 16px; min-width: 0; }
+.speaker-card__identity { display: grid; gap: 8px; border-bottom: 1px solid #d6d0cb; padding-bottom: 12px; }
+.speaker-card__label { display: flex; align-items: center; gap: 4px; font: 400 12px/18px var(--font-sans); color: var(--color-muted); }
+.speaker-card__label span { font: 600 32px/1 var(--font-display); color: var(--color-gold); }
+.speaker-card__identity h2 { font: 700 clamp(24px, 2.3vw, 32px)/1.2 var(--font-sans); margin: 8px 0; }
+.speaker-card__role { color: var(--color-gold-dark); font: 400 16px/24px var(--font-sans); }
+.speaker-card__affiliation { color: var(--color-muted); font: 400 16px/24px var(--font-sans); }
+.speaker-card__bio { font: 400 16px/30px var(--font-sans); letter-spacing: -.54px; }
+.speaker-card__link { justify-self: start; min-width: min(236px, 100%); }
+@media (max-width: 760px) { .speaker-card { grid-template-columns: 1fr; padding: 20px; gap: 20px; } .speaker-card__photo { max-width: 322px; } .speaker-card__bio { line-height: 26px; } }

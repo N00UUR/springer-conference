@@ -1,3 +1,4 @@
+import { programLocationLink } from '../../../data/conferenceLinks'
 import { conferenceDates, formatConferenceDate } from '../../../data/conferenceDates'
 import { conferenceVenue } from '../../../data/conferenceContacts'
 import calendarIcon from '../../../assets/icons/calendar.svg'
@@ -33,10 +34,10 @@ export default function HeroSection() {
           <time dateTime={conferenceDates.conferenceDay}>{formatConferenceDate(conferenceDates.conferenceDay)}</time>
         </span>
 
-        <span className="hero-badge" id="venue-location">
+        <a className="hero-badge" id="venue-location" href={programLocationLink}>
           <img src={locationIcon} alt="" />
           {conferenceVenue}
-        </span>
+        </a>
       </div>
 
       <PaperActions />

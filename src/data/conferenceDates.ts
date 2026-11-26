@@ -15,3 +15,7 @@ export function formatConferenceDate(isoDate: string, month: 'short' | 'long' = 
     timeZone: 'UTC',
   }).format(new Date(isoDate + 'T00:00:00Z'))
 }
+
+export const conferenceDateRange = conferenceDates.conferenceDay.slice(0, 7) === conferenceDates.conferenceEndDay.slice(0, 7)
+  ? `${Number(conferenceDates.conferenceDay.slice(-2))}-${formatConferenceDate(conferenceDates.conferenceEndDay)}`
+  : `${formatConferenceDate(conferenceDates.conferenceDay)} – ${formatConferenceDate(conferenceDates.conferenceEndDay)}`

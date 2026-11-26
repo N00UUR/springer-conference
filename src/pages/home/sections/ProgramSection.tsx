@@ -1,3 +1,5 @@
+import ActionLink from '../../../components/ui/ActionLink'
+import { programScheduleLink } from '../../../data/conferenceLinks'
 import ConferenceCard from '../../../components/conference/ConferenceCard'
 import SectionHeading from '../../../components/ui/SectionHeading'
 import { programSessions } from '../../../data/programSessions'
@@ -23,6 +25,7 @@ export default function ProgramSection() {
           />
         ))}
       </ul>
+      <div className="program-schedule-link"><ActionLink label="View Conference Schedule" href={programScheduleLink} arrow /></div>
     </section>
   )
 }
