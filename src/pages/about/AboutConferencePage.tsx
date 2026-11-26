@@ -1,8 +1,8 @@
+import QuickFacts from '../../components/conference/QuickFacts'
 import SiteHeader from '../../components/layout/SiteHeader'
 import SectionHeading from '../../components/ui/SectionHeading'
 import { conferenceDates, formatConferenceDate } from '../../data/conferenceDates'
-import { conferenceVenue } from '../../data/conferenceContacts'
-import { conferenceOrganizer, partnershipOpportunities } from '../../data/conferencePartners'
+import { partnershipOpportunities } from '../../data/conferencePartners'
 import ObjectivesSection from '../home/sections/ObjectivesSection'
 import TracksSection from '../home/sections/TracksSection'
 import ConferenceCard from '../../components/conference/ConferenceCard'
@@ -100,43 +100,6 @@ const foundation = {
   values: ['Peer-Reviewed Integrity', 'Interdisciplinary Synergy', 'Sustainable Computing'],
 }
 
-type QuickFact = Readonly<{ id: AboutIconName; label: string; value: string; secondLine?: string }>
-
-const startDay = conferenceDates.conferenceDay
-const endDay = conferenceDates.conferenceEndDay
-const dateRange = startDay.slice(0, 7) === endDay.slice(0, 7)
-  ? `${Number(startDay.slice(-2))}-${formatConferenceDate(endDay)}`
-  : `${formatConferenceDate(startDay)} – ${formatConferenceDate(endDay)}`
-
-const quickFacts: readonly QuickFact[] = [
-  { id: 'calendar', label: 'Conference Date', value: dateRange },
-  { id: 'organizer', label: 'Organizer', value: `${conferenceOrganizer.name},`, secondLine: conferenceOrganizer.affiliation.replace(/, Egypt$/, '') },
-  { id: 'venue-location', label: 'Venue Location', value: conferenceVenue },
-  { id: 'attendance', label: 'Attendance Options', value: 'Hybrid · Remote · In person' },
-]
-
-function QuickFacts({ facts }: Readonly<{ facts: readonly QuickFact[] }>) {
-  return (
-    <aside className="about-quick-facts" aria-labelledby="quick-facts-title">
-      <header className="about-quick-facts__heading">
-        <p className="about-conference-eyebrow">Quick facts</p>
-        <h2 id="quick-facts-title">At a glance</h2>
-      </header>
-      <dl className="about-quick-facts__list">
-        {facts.map(({ id, label, value, secondLine }) => (
-          <div className="about-quick-facts__row" key={id}>
-            <span className="about-quick-facts__icon" aria-hidden="true"><AboutIcon name={id} /></span>
-            <div className="about-quick-facts__copy">
-              <dt>{label}</dt>
-              <dd>{value}{secondLine && <span className="about-quick-facts__value-line">{secondLine}</span>}</dd>
-            </div>
-          </div>
-        ))}
-      </dl>
-    </aside>
-  )
-}
-
 export default function AboutConferencePage() {
   return (
     <main className="about-conference-page" lang="en" dir="ltr">
@@ -158,7 +121,7 @@ export default function AboutConferencePage() {
                 {foundation.values.map(value => <li key={value}><AboutIcon name="check-all" />{value}</li>)}
               </ul>
             </div>
-            <QuickFacts facts={quickFacts} />
+            <QuickFacts />
           </div>
         </section>
       </div>

@@ -1,0 +1,9 @@
+.program-page { background: var(--color-off-white); }
+.program-page__content { padding-block: var(--section-gap); }
+.program-page__cta { margin-bottom: clamp(32px, 3.55vw, 51px); min-height: 509px; display: grid; place-items: center; padding-block: 64px; }
+.program-page__cta .conference-cta__content { max-width: 1000px; width: 100%; }
+.program-page__cta .conference-cta__content h2 { max-width: 1000px; }
+.program-page__cta .action-link { min-width: min(193px, 100%); }
+.program-page a:focus-visible, .program-page button:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 3px; }
+.program-page__cta a:focus-visible { outline-color: white; }
+@media (max-width: 600px) { .program-page__cta { min-height: 320px; } }

@@ -5,37 +5,38 @@ import PartnersPage from './pages/about/PartnersPage'
 import CommitteePage from './pages/about/CommitteePage'
 import ScientificTracksPage from './pages/about/ScientificTracksPage'
 import AboutConferencePage from './pages/about/AboutConferencePage'
+import SchedulePage from './pages/program/SchedulePage'
+import KeynoteSpeakersPage from './pages/program/KeynoteSpeakersPage'
+import LocationPage from './pages/program/LocationPage'
+
+const routes = {
+  '#/about/conference': AboutConferencePage,
+  '#/about/scientific-tracks': ScientificTracksPage,
+  '#/about/committee': CommitteePage,
+  '#/about/partners': PartnersPage,
+  '#/program/schedule': SchedulePage,
+  '#/program/keynote-speakers': KeynoteSpeakersPage,
+  '#/program/location': LocationPage,
+}
 
 function subscribeToHash(onChange: () => void) {
   window.addEventListener('hashchange', onChange)
   return () => window.removeEventListener('hashchange', onChange)
 }
 
-function getHash() {
-  return window.location.hash
-}
+function getHash() { return window.location.hash }
 
 export default function App() {
   const hash = useSyncExternalStore(subscribeToHash, getHash, () => '')
-  const isAboutConferencePage = hash === '#/about/conference'
-  const isScientificTracksPage = hash === '#/about/scientific-tracks'
-
-  const isPartnersPage = hash === '#/about/partners'
-  const isCommitteePage = hash === '#/about/committee'
+  const Page = routes[hash as keyof typeof routes] ?? HomePage
 
   useLayoutEffect(() => {
-    // Home keeps its existing anchor links; the About route starts at the top.
-    if (isAboutConferencePage || isScientificTracksPage || isCommitteePage || isPartnersPage || !hash) {
-      window.scrollTo(0, 0)
-    } else if (hash.startsWith('#') && !hash.startsWith('#/')) {
-      document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView()
+    if (hash.startsWith('#/') || !hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    } else if (hash.startsWith('#')) {
+      document.getElementById(hash.slice(1))?.scrollIntoView()
     }
-  }, [hash, isAboutConferencePage, isScientificTracksPage, isCommitteePage, isPartnersPage])
+  }, [hash])
 
-  return (
-    <>
-      {isAboutConferencePage ? <AboutConferencePage /> : isScientificTracksPage ? <ScientificTracksPage /> : isCommitteePage ? <CommitteePage /> : isPartnersPage ? <PartnersPage /> : <HomePage />}
-      <SiteFooter />
-    </>
-  )
+  return <><Page /><SiteFooter /></>
 }

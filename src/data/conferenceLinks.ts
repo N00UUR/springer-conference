@@ -27,10 +27,14 @@ const authorLinks: readonly ConferenceLink[] = [
   { label: 'Submission Guidelines', href: paperGuidelines.href },
   { label: 'Evaluation Process' },
 ]
+export const programScheduleLink = `${home}#/program/schedule`
+export const programSpeakersLink = `${home}#/program/keynote-speakers`
+export const programLocationLink = `${home}#/program/location`
+
 const programLinks: readonly ConferenceLink[] = [
-  { label: 'Schedule' },
-  { label: 'Keynote Speakers' },
-  { label: 'Location', href: `${home}#venue-location` },
+  { label: 'Schedule', href: programScheduleLink },
+  { label: 'Keynote Speakers', href: programSpeakersLink },
+  { label: 'Location', href: programLocationLink },
 ]
 
 export const headerNavigation: readonly NavigationGroup[] = [
@@ -48,7 +52,7 @@ export const headerNavigation: readonly NavigationGroup[] = [
 ]
 
 export const footerNavigation: readonly NavigationGroup[] = [
-  { title: 'ABOUT', links: [about, scientificCommittee, partners, { label: 'Campus & Venue' }] },
+  { title: 'ABOUT', links: [about, scientificCommittee, partners, { label: 'Campus & Venue', href: programLocationLink }] },
   { title: 'Author Information', links: authorLinks },
   { title: 'Program', links: programLinks },
 ]

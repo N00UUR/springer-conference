@@ -23,3 +23,6 @@
   }
 
 }
+
+.program-schedule-link { display: flex; justify-content: center; margin-top: 32px; }
+.program-schedule-link .action-link { min-width: min(254px, 100%); }

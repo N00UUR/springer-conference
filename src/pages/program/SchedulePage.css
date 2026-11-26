@@ -1,0 +1,6 @@
+.schedule-page { max-width: 879px; }
+.schedule-days { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-inline: auto; max-width: 576px; }
+.schedule-days button { flex: 1 1 220px; min-height: 56px; border: 1px solid var(--color-gold); border-radius: 8px; color: var(--color-gold-dark); background: transparent; font: 500 20px/1.3 var(--font-sans); letter-spacing: -.54px; padding: 10px; cursor: pointer; }
+.schedule-days button[aria-selected='true'] { color: var(--color-ink); background: var(--color-gold); }
+.schedule-page [role="tabpanel"] { margin-top: 52px; }
+@media (max-width: 600px) { .schedule-page [role="tabpanel"] { margin-top: 32px; } .schedule-days { gap: 10px; } .schedule-days button { flex: 1 1 140px; font-size: 15px; min-height: 48px; } }
