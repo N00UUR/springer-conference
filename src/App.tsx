@@ -12,7 +12,10 @@ import LocationPage from './pages/program/LocationPage'
 import SubmissionGuidelinesPage from './pages/authors/SubmissionGuidelinesPage'
 import EvaluationProcessPage from './pages/authors/EvaluationProcessPage'
 
+import RegistrationFeesPage from './pages/registration/RegistrationFeesPage'
+
 const routes = {
+  '#/registration-fees': RegistrationFeesPage,
   '#/authors/submission-guidelines': SubmissionGuidelinesPage,
   '#/authors/evaluation-process': EvaluationProcessPage,
   '#/about/conference': AboutConferencePage,

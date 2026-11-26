@@ -19,6 +19,6 @@
 
 .conference-cta p {
   margin: 24px 0 clamp(28px, 3vw, 40px);
-  font: 400 clamp(16px, 1.6vw, 20px)/1.5 var(--font-sans);
+  font: 400 20px/30px var(--font-sans);
   letter-spacing: -0.54px;
 }

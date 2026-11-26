@@ -1,0 +1,19 @@
+.registration-page { background: var(--color-off-white); }
+.registration-page__content { display: grid; gap: var(--section-gap); padding-block: var(--section-gap); }
+.registration-page__fees { display: grid; gap: clamp(28px, 4vw, 52px); }
+.registration-page__pay { width: min(193px, 100%); justify-self: center; }
+.registration-page__pay:disabled { cursor: not-allowed; }
+.registration-page__understanding { display: grid; gap: 24px; }
+.registration-page__cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.registration-page__cta { min-height: 509px; display: grid; place-items: center; padding-block: 64px; margin-bottom: clamp(32px, 3.55vw, 51px); }
+.registration-page a:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 3px; }
+.registration-page__cta a:focus-visible { outline-color: white; }
+@media (min-width: 1001px) {
+  .registration-page .author-milestones__label { width: min(220px, 100%); }
+}
+@media (max-width: 800px) {
+  .registration-page__cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .registration-page__cta { min-height: 320px; }
+}

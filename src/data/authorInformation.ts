@@ -4,6 +4,7 @@ export type AuthorMilestone = Readonly<{
   id: string
   start: string
   end?: string
+  month?: 'short' | 'long'
   label: string
 }>
 
@@ -24,8 +25,8 @@ export const evaluationMilestones: readonly AuthorMilestone[] = [
   { ...cameraReady, label: 'Camera-ready and\nregistration' },
 ]
 
-export function formatMilestoneDate({ start, end }: AuthorMilestone) {
-  if (!end) return formatConferenceDate(start, 'short')
+export function formatMilestoneDate({ start, end, month = 'short' }: AuthorMilestone) {
+  if (!end) return formatConferenceDate(start, month)
   if (start.slice(0, 7) === end.slice(0, 7)) return `${Number(start.slice(-2))}–${formatConferenceDate(end, 'short')}`
   const startLabel = formatConferenceDate(start, 'short')
   return `${start.slice(0, 4) === end.slice(0, 4) ? startLabel.replace(/ \d{4}$/, '') : startLabel} – ${formatConferenceDate(end, 'short')}`

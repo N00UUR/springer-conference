@@ -15,7 +15,8 @@ export const aboutConferenceLink = `${home}#/about/conference`
 // Hash route works on Vite, Vercel, and static hosting without server rewrites.
 export const scientificTracksLink = `${home}#/about/scientific-tracks`
 export const contact = { label: 'Contact Us', href: '#contact' }
-export const registration = { label: 'Registration Fees', href: `${home}#registration-fees` }
+export const registration = { label: 'Registration Fees', href: `${home}#/registration-fees` }
+export const payment: ConferenceLink = { label: 'Pay Now' }
 export const submitPaper: ConferenceLink = { label: 'Submit Paper' }
 export const submissionGuidelinesLink = `${home}#/authors/submission-guidelines`
 export const evaluationProcessLink = `${home}#/authors/evaluation-process`
