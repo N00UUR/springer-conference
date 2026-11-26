@@ -9,6 +9,7 @@ export const conferenceDates = {
   finalAcceptance: '2027-03-25',
   decisionNotification: '2027-03-10',
   authorRegistrationDeadline: '2027-03-30',
+  programAnnouncement: '2027-04-05',
   conferenceDay: '2027-04-14',
   conferenceEndDay: '2027-04-15',
 } as const

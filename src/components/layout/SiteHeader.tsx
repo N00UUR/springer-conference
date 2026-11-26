@@ -9,7 +9,7 @@ import './SiteHeader.css'
 export default function SiteHeader({
   isHome = false,
   activeGroup,
-}: Readonly<{ isHome?: boolean; activeGroup?: 'About' | 'Authors' | 'Program' }>) {
+}: Readonly<{ isHome?: boolean; activeGroup?: 'About' | 'Authors' | 'Program' | 'Registration Fees' }>) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openGroup, setOpenGroup] = useState<string | null>(null)
   const header = useRef<HTMLElement>(null)
@@ -134,7 +134,12 @@ export default function SiteHeader({
               </div>
             )
           })}
-          <a href={registration.href} onClick={closeNavigation}>{registration.label}</a>
+          <a
+            href={registration.href}
+            className={activeGroup === 'Registration Fees' ? 'site-active' : undefined}
+            aria-current={activeGroup === 'Registration Fees' ? 'page' : undefined}
+            onClick={closeNavigation}
+          >{registration.label}</a>
         </nav>
 
         <div className="site-auth">

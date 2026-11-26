@@ -1,6 +1,6 @@
 import { conferenceDates, formatConferenceDate } from '../../data/conferenceDates'
 import noticeIcon from '../../assets/icons/publication/important-notice.svg'
-import { registrationFees, type RegistrationFee } from '../../data/registrationFees'
+import { registrationFees, formatRegistrationAmount, type RegistrationFee } from '../../data/registrationFees'
 import './RegistrationFeesTable.css'
 
 type RegistrationFeesTableProps = Readonly<{
@@ -12,8 +12,6 @@ const columns = [
   { label: 'Egyptian Participants', currency: 'EGP' },
   { label: 'International Participants', currency: 'USD' },
 ] as const
-
-const amountFormat = new Intl.NumberFormat('en-GB')
 
 export default function RegistrationFeesTable({ labelledBy, fees = registrationFees }: RegistrationFeesTableProps) {
   return (
@@ -37,7 +35,7 @@ export default function RegistrationFeesTable({ labelledBy, fees = registrationF
               {columns.map(({ label, currency }) => (
                 <td key={currency} role="cell">
                   <span className="fee-mobile-label" aria-hidden="true">{label}</span>
-                  <span className="fee-amount">{amountFormat.format(amounts[currency])} {currency}</span>
+                  <span className="fee-amount">{formatRegistrationAmount(amounts[currency], currency)}</span>
                 </td>
               ))}
             </tr>
