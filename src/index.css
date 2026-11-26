@@ -63,3 +63,22 @@
   );
   margin-inline: auto;
 }
+
+/* Shared native scrolling. Keep the existing Home snap rules in HomePage.css. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Inner pages have long content: snap only near section boundaries on desktop. */
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  html:has(main:not(.conference-home)) {
+    scroll-snap-type: y proximity;
+  }
+
+  main:not(.conference-home) > :first-child,
+  main:not(.conference-home) section {
+    scroll-snap-align: start;
+  }
+}

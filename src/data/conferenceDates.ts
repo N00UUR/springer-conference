@@ -1,6 +1,12 @@
 export const conferenceDates = {
   submissionsOpen: '2026-12-01',
   submissionDeadline: '2027-01-31',
+  screeningStart: '2027-02-01',
+  screeningEnd: '2027-02-03',
+  peerReviewStart: '2027-02-04',
+  peerReviewEnd: '2027-03-09',
+  revisedPaperDeadline: '2027-03-20',
+  finalAcceptance: '2027-03-25',
   decisionNotification: '2027-03-10',
   authorRegistrationDeadline: '2027-03-30',
   conferenceDay: '2027-04-14',

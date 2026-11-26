@@ -12,10 +12,14 @@ function formatTime(value: string, includePeriod = true) {
 function ScheduleCard({ session }: Readonly<{ session: ScheduleSession }>) {
   const { type, title, start, end, description } = session
   const samePeriod = (Number(start.split(':')[0]) < 12) === (Number(end.split(':')[0]) < 12)
+  const badge = <span className={`schedule-badge schedule-badge--${type}`}>{labels[type]}</span>
   return (
     <article className={`schedule-card schedule-card--${type}`}>
       <header className="schedule-card__header">
-        <div className="schedule-card__title"><h2>{title}</h2><span className={`schedule-badge schedule-badge--${type}`}>{labels[type]}</span></div>
+        <div className="schedule-card__title">
+          <h2>{title}</h2>
+          {badge}
+        </div>
         <p className="schedule-card__time"><time dateTime={start} aria-label={formatTime(start)}>{formatTime(start, !samePeriod)}</time><span aria-hidden="true">–</span><time dateTime={end}>{formatTime(end)}</time></p>
       </header>
       <p className="schedule-card__description">{description}</p>
