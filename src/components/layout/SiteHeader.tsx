@@ -6,7 +6,10 @@ import ActionLink from '../ui/ActionLink'
 import ConferenceLogo from './ConferenceLogo'
 import './SiteHeader.css'
 
-export default function SiteHeader({ isHome = false }: Readonly<{ isHome?: boolean }>) {
+export default function SiteHeader({
+  isHome = false,
+  activeGroup,
+}: Readonly<{ isHome?: boolean; activeGroup?: 'About' | 'Authors' | 'Program' }>) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openGroup, setOpenGroup] = useState<string | null>(null)
   const header = useRef<HTMLElement>(null)
@@ -80,24 +83,28 @@ export default function SiteHeader({ isHome = false }: Readonly<{ isHome?: boole
           >
             Home
           </a>
-          {headerNavigation.map(({ title, links }) => {
+          {headerNavigation.map(({ title, href, links }) => {
             const isOpen = openGroup === title
             const panelId = `site-nav-${title.toLowerCase()}`
             return (
               <div key={title} className="site-nav-group">
-                <button
-                  type="button"
-                  className="site-nav-trigger"
-                  aria-expanded={isOpen}
-                  aria-controls={panelId}
-                  onClick={event => {
-                    groupToggle.current = event.currentTarget
-                    setOpenGroup(current => current === title ? null : title)
-                  }}
-                >
-                  {title}
-                  <img src={chevron} alt="" width={18} height={18} />
-                </button>
+                <div className={href ? 'site-nav-split' : undefined}>
+                  {href && <a href={href} className={title === activeGroup ? 'site-nav-parent site-active' : 'site-nav-parent'} onClick={closeNavigation}>{title}</a>}
+                  <button
+                    type="button"
+                    className={['site-nav-trigger', href && 'site-nav-trigger--arrow', title === activeGroup && 'site-active'].filter(Boolean).join(' ')}
+                    aria-label={href ? `${isOpen ? 'Close' : 'Open'} ${title} navigation` : undefined}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={event => {
+                      groupToggle.current = event.currentTarget
+                      setOpenGroup(current => current === title ? null : title)
+                    }}
+                  >
+                    {!href && title}
+                    <img src={chevron} alt="" width={18} height={18} />
+                  </button>
+                </div>
                 <ul className="site-dropdown" id={panelId} hidden={!isOpen} aria-label={title}>
                   {links.map(({ label, href }) => (
                     <li key={label}>

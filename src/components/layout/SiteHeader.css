@@ -109,3 +109,12 @@
     box-shadow: none;
   }
 }
+
+/* About has a destination as well as a separate disclosure control. */
+.site-nav-split { display: flex; align-items: center; gap: 4px; }
+.site-nav-parent { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; letter-spacing: -.54px; }
+.site-nav-trigger--arrow { width: 24px; justify-content: center; flex: none; }
+@media (max-width: 1050px) {
+  .site-nav-parent { flex: 1; }
+  .site-nav-trigger--arrow { width: 44px; justify-content: center; }
+}

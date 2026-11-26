@@ -1,0 +1,9 @@
+.committee-page { background: var(--color-off-white); padding-bottom: clamp(16px, 3.5vw, 50px); }
+.committee-page__nav { padding-block: clamp(12px, 1.8vw, 24px) 0; }
+.committee-page__intro { max-width: 717px; padding-block: clamp(64px, 5.8vw, 84px) clamp(64px, 7vw, 100px); }
+.committee-page__intro p { margin-top: 16px; font-size: 20px; }
+.committee-page__sections { display: grid; gap: clamp(40px, 4vw, 56px); }
+@media (max-width: 760px) {
+  .committee-page__intro { padding-block: 56px 48px; }
+  .committee-page__intro p { font-size: 16px; line-height: 26px; }
+}

@@ -5,13 +5,14 @@ type CallToActionProps = {
   title: string
   description: string
   children: ReactNode
+  className?: string
 }
 
-export default function CallToAction({ title, description, children }: CallToActionProps) {
+export default function CallToAction({ title, description, children, className }: CallToActionProps) {
   const titleId = useId()
 
   return (
-    <section className="conference-cta" aria-labelledby={titleId}>
+    <section className={["conference-cta", className].filter(Boolean).join(" ")} aria-labelledby={titleId}>
       <div className="conference-cta__content">
         <h2 id={titleId}>{title}</h2>
         <p>{description}</p>

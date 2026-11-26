@@ -67,39 +67,39 @@
 }
 
 @media (min-width: 761px) and (max-height: 780px) {
-  .objectives-section {
+  .objectives-section--home {
     min-height: 100svh;
     display: grid;
     align-content: center;
     padding-block: clamp(12px, 3svh, 36px);
   }
 
-  .objectives-intro {
+  .objectives-section--home .objectives-intro {
     margin-top: 8px;
     font-size: 1.125rem;
   }
 
-  .objectives-grid {
+  .objectives-section--home .objectives-grid {
     margin-top: clamp(16px, 3svh, 32px);
     gap: clamp(12px, 2svh, 20px);
   }
 
-  .objective-card {
+  .objectives-section--home .objective-card {
     min-height: clamp(96px, 19svh, 150px);
     padding: 12px 20px;
     grid-template-columns: 54px minmax(0, 1fr);
   }
 
-  .objective-card img {
+  .objectives-section--home .objective-card img {
     width: 42px;
     height: 42px;
   }
 
-  .objective-card h3 {
+  .objectives-section--home .objective-card h3 {
     font-size: 1.125rem;
   }
 
-  .objective-card p {
+  .objectives-section--home .objective-card p {
     line-height: 1.45;
   }
 }

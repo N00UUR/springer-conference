@@ -19,17 +19,15 @@ export default function PublicationSection() {
 
         <h2 id="publication-title">From Presentation To Publication</h2>
 
-        <article className="publication-journal">
-          <h3>Menoufia Journal of Electronic Engineering Research (MJEER)</h3>
-          <p>
-            Selected conference papers may be considered for publication in the
-            proposed Menoufia Journal{' '}
-            <span>
-              of Electronic Engineering Research (MJEER), subject to the
-              journal’s editorial policies and review requirements.
-            </span>
-          </p>
-        </article>
+        
+<article className="publication-journal">
+  <p>
+    Selected conference papers may be considered for publication in a
+    partner scientific journal, subject to the journal's editorial
+    policies and review requirements. Publication venues and
+    arrangements will be announced once confirmed.
+  </p>
+</article>
 
         <aside
           className="publication-notice"

@@ -1,9 +1,9 @@
 import { conferenceObjectives } from '../../../data/conferenceObjectives'
 import './ObjectivesSection.css'
 
-export default function ObjectivesSection() {
+export default function ObjectivesSection({ variant = 'home' }: Readonly<{ variant?: 'home' | 'about' }>) {
   return (
-    <section id="objectives" className="objectives-section" aria-labelledby="objectives-title">
+    <section id="objectives" className={`objectives-section objectives-section--${variant}`} aria-labelledby="objectives-title">
       <div className="page-container">
         <h2 id="objectives-title">Objectives of Conference</h2>
         <p className="objectives-intro">

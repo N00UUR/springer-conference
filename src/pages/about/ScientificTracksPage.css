@@ -1,0 +1,37 @@
+.scientific-tracks-page {
+  background: var(--color-off-white);
+}
+
+.scientific-tracks-page__nav {
+  padding-block: clamp(12px, 1.8vw, 24px) 0;
+}
+
+.scientific-tracks-page__intro {
+  max-width: 840px;
+  padding-block: clamp(64px, 5.8vw, 84px) clamp(64px, 5vw, 72px);
+}
+
+.scientific-tracks-page__intro :is(h1, h2) {
+  color: var(--color-ink);
+  font-size: clamp(32px, 3vw, 40px);
+  line-height: 1;
+}
+
+.scientific-tracks-page__intro p {
+  margin-top: 16px;
+  font: 400 20px/30px var(--font-sans);
+  letter-spacing: -0.54px;
+  color: var(--color-muted);
+}
+
+.scientific-tracks-page__list {
+  display: grid;
+  gap: 24px;
+}
+
+@media (max-width: 760px) {
+  .scientific-tracks-page__intro { padding-block: 56px 48px; }
+  .scientific-tracks-page__intro :is(h1, h2) { line-height: 1.2; }
+  .scientific-tracks-page__intro p { font-size: 16px; line-height: 26px; }
+  .scientific-tracks-page__list { gap: 16px; }
+}

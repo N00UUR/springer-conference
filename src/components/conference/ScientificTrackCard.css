@@ -1,0 +1,78 @@
+/* Each accent belongs to the card, not to the shared page-wide theme. */
+.scientific-track-card { --track-accent: var(--color-gold); }
+.scientific-track-card--cybersecurity { --track-accent: #44546a; }
+.scientific-track-card--digital-transformation { --track-accent: #5b4b8a; }
+.scientific-track-card--cloud-iot { --track-accent: #2e6f57; }
+.scientific-track-card--networks { --track-accent: #1f7a8c; }
+.scientific-track-card--software { --track-accent: #2f5d9b; }
+.scientific-track-card--medical { --track-accent: #7a2e3a; }
+.scientific-track-card--emerging-tech { --track-accent: #b94e6b; }
+
+.scientific-track-card {
+  min-width: 0;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-left: 6px solid var(--track-accent);
+  border-radius: 8px;
+  background: var(--color-surface);
+}
+
+.scientific-track-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 84px;
+}
+
+.scientific-track-card__number {
+  flex: none;
+  color: var(--track-accent);
+  font: 700 32px/1 var(--font-display);
+}
+
+.scientific-track-card__heading h2 {
+  margin: 0;
+  color: #000;
+  font: 600 32px/1 var(--font-display);
+  overflow-wrap: anywhere;
+}
+
+.scientific-track-card__topics {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scientific-track-card__topics li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 30px;
+  color: #000;
+  font: 400 20px/30px var(--font-sans);
+  letter-spacing: -0.54px;
+}
+
+.scientific-track-card__topics svg {
+  flex: 0 0 20px;
+  color: var(--track-accent);
+}
+
+@media (max-width: 760px) {
+  .scientific-track-card { padding: 22px 18px; gap: 18px; }
+  .scientific-track-card__heading { min-height: 0; align-items: flex-start; gap: 12px; }
+  .scientific-track-card__number { padding-top: 2px; font-size: 26px; }
+  .scientific-track-card__heading h2 { font-size: clamp(22px, 4.5vw, 28px); line-height: 1.22; }
+  .scientific-track-card__topics { gap: 10px; }
+  .scientific-track-card__topics li { font-size: 16px; line-height: 26px; }
+}
+
+@media (max-width: 400px) {
+  .scientific-track-card { padding-inline: 12px; }
+  .scientific-track-card__heading { gap: 10px; }
+  .scientific-track-card__number { font-size: 23px; }
+}

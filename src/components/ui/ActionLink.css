@@ -29,3 +29,13 @@ a.action-link:hover { text-decoration: underline; }
   background-color: currentColor;
   mask: var(--arrow-image) center / contain no-repeat;
 }
+
+.action-link--outline {
+  border: 1px solid var(--color-gold);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: var(--color-gold-dark);
+  background: transparent;
+  letter-spacing: -0.54px;
+}
+.action-link--outline:disabled { cursor: not-allowed; }
