@@ -1,0 +1,33 @@
+.contact-information { background: var(--color-ink); color: var(--color-surface); padding: 24px 16px; border-radius: 8px; min-height: 403px; display: flex; flex-direction: column; gap: 24px; min-width: 0; container-type: inline-size; }
+.contact-information__intro { display: grid; justify-items: start; gap: 12px; max-width: 269px; }
+.contact-information__badge { display: inline-flex; align-items: center; justify-content: center; min-width: 98px; min-height: 28px; border-radius: 8px; background: var(--color-gold); color: var(--color-ink); font: 400 12px/18px var(--font-sans); }
+.contact-information h2 { margin: 0; font: 400 20px/30px var(--font-sans); letter-spacing: -.54px; }
+.contact-information p { color: #c5c5c5; font: 400 12px/18px var(--font-sans); margin: 0; }
+.contact-information address { font-style: normal; }
+.contact-information__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; list-style: none; margin: 0; padding: 0; }
+.contact-information__item { min-width: 0; }
+.contact-information__item > :is(a, div) { display: flex; align-items: center; gap: 8px; min-height: 56px; padding: 16px 6px; border-radius: 8px; background: var(--color-muted); font: 400 12px/18px var(--font-sans); color: var(--color-surface); height: 100%; box-sizing: border-box; text-decoration: none; }
+.contact-information__item img { flex: 0 0 24px; width: 24px; height: 24px; object-fit: contain; }
+.contact-information__item span { min-width: 0; overflow-wrap: anywhere; }
+.contact-information__item--email span, .contact-information__item--phone span { white-space: nowrap; }
+.contact-information__item--location { grid-column: 1 / -1; width: min(312px, 100%); }
+.contact-information__item--location > div { min-height: 72px; font: 400 13px/20px var(--font-sans); color: var(--color-off-white); }
+.contact-information__item--location span { max-width: 222px; }
+.contact-information a:hover { text-decoration: underline; }
+.contact-information a:focus-visible { outline: 2px solid var(--color-light-gold); outline-offset: 3px; }
+/* Stack when the panel cannot accommodate two 234px tiles plus their 24px gap. */
+@container (max-width: 491px) {
+  .contact-information__list { grid-template-columns: 1fr; }
+  .contact-information__item--email span, .contact-information__item--phone span { white-space: normal; }
+  .contact-information__item--location { width: 100%; }
+  .contact-information__item--location span { max-width: 222px; }
+}
+@media (max-width: 850px) { .contact-information { min-height: 0; } }
+
+@media (max-width: 600px) {
+  .contact-information__list { grid-template-columns: 1fr; }
+  .contact-information__item--email span, .contact-information__item--phone span { white-space: normal; }
+  .contact-information__item--location { width: 100%; }
+  .contact-information p, .contact-information__item > :is(a, div) { font-size: 14px; line-height: 21px; }
+  .contact-information__item--location span { max-width: none; }
+}

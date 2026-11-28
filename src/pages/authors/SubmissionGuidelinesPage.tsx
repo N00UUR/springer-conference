@@ -1,9 +1,9 @@
 import AuthorsLayout from '../../components/authors/AuthorsLayout'
 import AuthorMilestoneTimeline from '../../components/authors/AuthorMilestoneTimeline'
 import ActionLink from '../../components/ui/ActionLink'
-import { paperRequirements, submissionDescription, submissionMilestones, submissionSteps } from '../../data/authorInformation'
+import { submissionDescription, submissionMilestones, submissionSteps } from '../../data/authorInformation'
 import { submitPaper } from '../../data/conferenceLinks'
-import checkIcon from '../../assets/icons/authors/paper-check.svg'
+import PaperRequirements from '../../components/authors/PaperRequirements'
 import './SubmissionGuidelinesPage.css'
 
 export default function SubmissionGuidelinesPage() {
@@ -14,9 +14,7 @@ export default function SubmissionGuidelinesPage() {
         <section aria-labelledby="paper-guidelines-title">
           <h2 className="authors-section-title" id="paper-guidelines-title">Paper Guidelines</h2>
           <p className="authors-section-intro">Follow these requirements before you submit.</p>
-          <ul className="submission-guidelines__requirements">
-            {paperRequirements.map(requirement => <li key={requirement}><img src={checkIcon} alt="" width={24} height={24} /><span>{requirement}</span></li>)}
-          </ul>
+          <PaperRequirements />
           <ActionLink {...submitPaper} arrow className="submission-guidelines__submit" />
         </section>
         <section aria-labelledby="submission-steps-title">

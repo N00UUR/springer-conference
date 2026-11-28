@@ -8,3 +8,5 @@
 .program-header__facts li { display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; min-height: 36px; border-radius: 8px; background: var(--color-surface); font: 500 14px/20px var(--font-sans); letter-spacing: -.54px; }
 .program-header__facts img { flex: none; }
 @media (max-width: 600px) { .program-header { border-radius: 0 0 28px 28px; } .program-header__facts { margin-top: 28px; gap: 10px; } }
+
+.program-header--no-facts .program-header__intro { padding-bottom: clamp(72px, 11vw, 160px); }

@@ -14,7 +14,12 @@ import EvaluationProcessPage from './pages/authors/EvaluationProcessPage'
 
 import RegistrationFeesPage from './pages/registration/RegistrationFeesPage'
 
+import ContactPage from './pages/contact/ContactPage'
+import SubmitPaperPage from './pages/authors/SubmitPaperPage'
+
 const routes = {
+  '#/contact': ContactPage,
+  '#/submit-paper': SubmitPaperPage,
   '#/registration-fees': RegistrationFeesPage,
   '#/authors/submission-guidelines': SubmissionGuidelinesPage,
   '#/authors/evaluation-process': EvaluationProcessPage,

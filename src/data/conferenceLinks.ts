@@ -14,10 +14,12 @@ export const aboutConferenceLink = `${home}#/about/conference`
 
 // Hash route works on Vite, Vercel, and static hosting without server rewrites.
 export const scientificTracksLink = `${home}#/about/scientific-tracks`
-export const contact = { label: 'Contact Us', href: '#contact' }
+export const contact = { label: 'Contact Us', href: `${home}#/contact` }
 export const registration = { label: 'Registration Fees', href: `${home}#/registration-fees` }
 export const payment: ConferenceLink = { label: 'Pay Now' }
-export const submitPaper: ConferenceLink = { label: 'Submit Paper' }
+export const submitPaper: ConferenceLink = { label: 'Submit Paper', href: `${home}#/submit-paper` }
+// Set href to the official conference-specific CMT URL when supplied.
+export const cmtSubmission: ConferenceLink = { label: 'Submit on Microsoft CMT' }
 export const submissionGuidelinesLink = `${home}#/authors/submission-guidelines`
 export const evaluationProcessLink = `${home}#/authors/evaluation-process`
 export const paperGuidelines: ConferenceLink = { label: 'Paper Guidelines', href: submissionGuidelinesLink }
