@@ -1,0 +1,121 @@
+.submit-paper-page__upload {
+  padding-block: var(--section-gap);
+}
+
+.submit-paper-page__panel {
+  position: relative;
+  box-sizing: border-box;
+  width: min(734px, 100%);
+  min-height: 438px;
+  margin-inline: auto;
+  padding: 52px 27px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* SVG keeps Figma's 24px dash / 24px gap at every viewport width. */
+.submit-paper-page__border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.submit-paper-page__border rect {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  fill: none;
+  stroke: var(--color-gold);
+  stroke-width: 2px;
+  stroke-dasharray: 24px 24px;
+}
+
+.submit-paper-page__panel-content,
+.submit-paper-page__panel-intro {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit-paper-page__panel-content { gap: 40px; }
+.submit-paper-page__panel-intro { gap: 16px; }
+
+.submit-paper-page__icon {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 69px;
+  border-radius: 5px;
+  background: var(--color-section-sand);
+}
+
+.submit-paper-page__panel h2 {
+  display: grid;
+  align-items: center;
+  min-height: 41px;
+  margin: 0;
+  font: 700 24px/1 var(--font-sans);
+}
+
+.submit-paper-page__panel p {
+  margin: 0;
+  font: italic 400 16px/30px var(--font-sans);
+  letter-spacing: -.54px;
+  color: var(--color-muted);
+}
+
+.submit-paper-page__cmt { width: min(300px, 100%); }
+
+.submit-paper-page__guidelines {
+  background: var(--color-timeline);
+  padding-block: 46px 39px;
+}
+
+.submit-paper-page__guidelines-inner { max-width: 1171px; }
+
+.submit-paper-page__guidelines h2 {
+  display: grid;
+  align-items: center;
+  min-height: 60px;
+  text-align: center;
+  margin: 0;
+  font: 600 32px/1 var(--font-display);
+}
+
+.submit-paper-page__guidelines p {
+  text-align: center;
+  color: var(--color-muted);
+  font: 400 16px/30px var(--font-sans);
+  letter-spacing: -.54px;
+  margin: 0;
+}
+
+/* Page-specific spacing; the other consumer keeps its current layout. */
+.submit-paper-page__guidelines .paper-requirements { margin-top: 32px; }
+.submit-paper-page__guidelines .paper-requirements li { font-size: 20px; }
+
+.submit-paper-page__submit {
+  display: flex;
+  width: min(193px, 100%);
+  margin: 32px auto 0;
+}
+
+.submit-paper-page button:disabled { cursor: not-allowed; }
+.submit-paper-page a:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 3px; }
+
+@media (max-width: 600px) {
+  .submit-paper-page__panel { min-height: 0; padding: 40px 20px; }
+  .submit-paper-page__panel-content { gap: 32px; }
+  .submit-paper-page__panel h2 { line-height: 1.25; }
+  .submit-paper-page__guidelines { padding-block: 32px; }
+  .submit-paper-page__guidelines h2 { font-size: 26px; min-height: 0; line-height: 1.25; }
+  .submit-paper-page__guidelines p { margin-top: 12px; line-height: 24px; }
+  .submit-paper-page__guidelines .paper-requirements li { font-size: 16px; line-height: 24px; }
+  .submit-paper-page__guidelines .paper-requirements img { margin-top: 0; }
+  .submit-paper-page__cmt { flex-wrap: wrap; }
+}

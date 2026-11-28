@@ -1,0 +1,6 @@
+.contact-page__content { display: grid; grid-template-columns: minmax(0, 519fr) minmax(0, 739fr); align-items: start; gap: 24px; padding-top: var(--section-gap); padding-bottom: clamp(16px, 3.5vw, 50px); }
+/* Figma tiles need 492px of inner width + 32px panel padding. */
+@media (min-width: 1101px) {
+  .contact-page__content { grid-template-columns: minmax(524px, 519fr) minmax(0, 739fr); }
+}
+@media (max-width: 850px) { .contact-page__content { grid-template-columns: 1fr; gap: 32px; } }

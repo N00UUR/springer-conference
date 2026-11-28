@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type KeyboardEvent, type MouseEvent } from 'react'
+import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { Menu, X } from 'lucide-react'
 import chevron from '../../assets/icons/chevron-down.svg'
 import { contact, headerNavigation, homeLink, registration } from '../../data/conferenceLinks'
@@ -36,23 +36,6 @@ export default function SiteHeader({
       compactLayout.removeEventListener('change', closeNavigation)
     }
   }, [menuOpen, openGroup])
-
-  function handleContactClick(event: MouseEvent<HTMLAnchorElement>) {
-    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
-    const target = document.getElementById('contact')
-    if (!target) {
-      closeNavigation()
-      return
-    }
-
-    // A fragment-only href would replace an About page's hash route.
-    // The shared footer is already mounted, so scroll without navigating.
-    event.preventDefault()
-    closeNavigation()
-    target.focus({ preventScroll: true })
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    target.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth', block: 'end' })
-  }
 
   function handleKeyDown(event: KeyboardEvent<HTMLElement>) {
     if (event.key !== 'Escape') return
@@ -143,7 +126,7 @@ export default function SiteHeader({
         </nav>
 
         <div className="site-auth">
-          <ActionLink {...contact} className="site-contact" onNavigate={handleContactClick} />
+          <ActionLink {...contact} className="site-contact" onNavigate={closeNavigation} />
         </div>
       </div>
     </header>

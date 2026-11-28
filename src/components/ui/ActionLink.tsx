@@ -9,6 +9,7 @@ type ActionLinkProps = Readonly<{
   className?: string
   leadingIcon?: ReactNode
   arrow?: boolean
+  buttonType?: 'button' | 'submit'
   arrowClassName?: string
 }>
 
@@ -21,6 +22,7 @@ export default function ActionLink({
   leadingIcon,
   arrow,
   arrowClassName,
+  buttonType = 'button',
 }: ActionLinkProps) {
   const classes = ['action-link', `action-link--${variant}`, className].filter(Boolean).join(' ')
   const content = (
@@ -38,5 +40,5 @@ export default function ActionLink({
 
   return href
     ? <a href={href} className={classes} onClick={onNavigate}>{content}</a>
-    : <button type="button" disabled className={classes}>{content}</button>
+    : <button type={buttonType} disabled={buttonType !== 'submit'} className={classes}>{content}</button>
 }
